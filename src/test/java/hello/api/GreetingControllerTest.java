@@ -1,7 +1,7 @@
 package hello.api;
 
 import hello.model.Greeting;
-import hello.model.SimpleNameMessage;
+import hello.model.HelloMessage;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -12,13 +12,13 @@ class GreetingControllerTest {
     private final String name = "name";
 
     @Test
-    void greeting() throws InterruptedException {
+    void greeting() throws Exception {
         // Prepare
-        SimpleNameMessage message = new SimpleNameMessage(name);
-        String expectedContent = "Hello, " + name;
+        HelloMessage helloMessage = new HelloMessage(name);
+        String expectedContent = "Hello, " + name + "!";
 
         // Actual
-        Greeting actualResult = controller.greeting(message);
+        Greeting actualResult = controller.greeting(helloMessage);
 
         //  Assertion
         Assertions.assertThat(actualResult.getContent()).isEqualTo(expectedContent);

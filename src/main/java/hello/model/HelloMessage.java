@@ -12,9 +12,9 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class SimpleNameMessage {
+@NoArgsConstructor
+public class HelloMessage {
 
     private String name;
 }

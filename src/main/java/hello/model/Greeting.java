@@ -1,11 +1,19 @@
 package hello.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
- * Интерфейс для всех приветствий
- *
  * @author Pavel Zaytsev
  */
-public interface Greeting {
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Greeting {
 
-    String getContent();
+    private String content;
+
 }

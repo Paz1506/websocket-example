@@ -37,11 +37,11 @@
             stompClient.send("/app/hello", {}, JSON.stringify({ 'name': name }));
         }
 
-        function showGreeting(message) {
+        function showGreeting(helloMessage) {
             var response = document.getElementById('response');
             var p = document.createElement('p');
             p.style.wordWrap = 'break-word';
-            p.appendChild(document.createTextNode(message));
+            p.appendChild(document.createTextNode(helloMessage));
             response.appendChild(p);
         }
     </script>
